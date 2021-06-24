@@ -25,11 +25,11 @@
 
 # Project gen files
 .idea/
-.allure/
 .gradle/
+.build/
+.allure/
 allure-results/
 gradle/
-build/
 bin/
 out/
 logs/
