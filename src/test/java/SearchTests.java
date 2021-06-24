@@ -1,5 +1,7 @@
 import com.codeborne.selenide.Config;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,27 +18,32 @@ public class SearchTests {
     static Logger logger = LoggerFactory.getLogger(SearchTests.class);
 
     @BeforeAll
-    static void config(){
+    static void config() {
         logger.info("BeforeAll method");
         Configuration.startMaximized = true;
         Configuration.browser = "chrome";
     }
 
     @BeforeEach
-    void openGooglePage(){
+    void openGooglePage() {
         logger.info("BeforeEach method");
         open("https://google.com/");
     }
 
+    @AfterEach
+    void closeBrowser() {
+        closeWebDriver();
+    }
+
     @Test
-    void selenideSearchTest(){
+    void selenideSearchTest() {
         logger.info("This is selenide test!");
         $(byName("q")).setValue("selenide").pressEnter();
         $("#search").shouldHave(text("selenide.org"));
     }
 
     @Test
-    void allureSearchTest(){
+    void allureSearchTest() {
         logger.info("This is allure test!");
         $(byName("q")).setValue("Allure testops").pressEnter();
         $("#search").shouldHave(text("qameta.io"));
