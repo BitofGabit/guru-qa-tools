@@ -1,7 +1,6 @@
-import com.codeborne.selenide.Config;
+package com.homeWork1;
+
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byName;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class SearchTests {
@@ -21,18 +20,13 @@ public class SearchTests {
     static void config() {
         logger.info("BeforeAll method");
         Configuration.startMaximized = true;
-        Configuration.browser = "chrome";
+        Configuration.headless = true;
     }
 
     @BeforeEach
     void openGooglePage() {
         logger.info("BeforeEach method");
         open("https://google.com/");
-    }
-
-    @AfterEach
-    void closeBrowser() {
-        closeWebDriver();
     }
 
     @Test
