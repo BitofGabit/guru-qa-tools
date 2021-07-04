@@ -1,4 +1,4 @@
-package com.homeWork1;
+package com.google;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
@@ -12,9 +12,9 @@ import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SearchTests {
+public class SearchTest {
 
-    static Logger logger = LoggerFactory.getLogger(SearchTests.class);
+    static Logger logger = LoggerFactory.getLogger(SearchTest.class);
 
     @BeforeAll
     static void config() {

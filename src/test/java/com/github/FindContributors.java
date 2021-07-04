@@ -1,4 +1,4 @@
-package com.homeWork3;
+package com.github;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
