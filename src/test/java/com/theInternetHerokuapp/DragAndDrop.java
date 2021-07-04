@@ -33,5 +33,4 @@ public class DragAndDrop {
         $("#column-b").shouldNotBe(Condition.text("B"));
 
     }
-
 }
