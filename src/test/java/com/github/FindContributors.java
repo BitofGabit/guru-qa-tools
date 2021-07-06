@@ -30,7 +30,7 @@ public class FindContributors {
                 .shouldHave(text("SoftAssertions"));
         $(".js-wiki-sidebar-toggle-display .wiki-more-pages > strong > a").click();
         // Проверьте что внутри есть пример кода для JUnit5
-        $("[start=\"3\"] > li").
-                shouldHave(text("Using JUnit5 extend test class:"));
+        $("[start=\"3\"] > li")
+                .shouldHave(text("Using JUnit5 extend test class:"));
     }
 }
