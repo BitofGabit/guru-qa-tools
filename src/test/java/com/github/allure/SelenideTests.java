@@ -21,11 +21,11 @@ public class SelenideTests {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         open(BASE_URL);
-        $(".header-search-input").click();
-        $(".header-search-input").sendKeys(REPOSITORY);
-        $(".header-search-input").submit();
+        $("[data-scoped-placeholder=\"Search\"]")
+                .setValue(REPOSITORY)
+                .submit();
         $(By.linkText("eroshenkoam/allure-example")).click();
-        $(withText("Isues")).click();
+        $("[data-content=\"Isues\"]").click();
         $(withText("#" + ISSUE_NUMBER)).should(Condition.exist);
     }
 }
