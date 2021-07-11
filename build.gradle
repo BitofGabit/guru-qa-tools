@@ -19,7 +19,7 @@ dependencies {
     //JUnit5
     testImplementation(
             "org.junit.jupiter:junit-jupiter-api:5.7.2",
-            'io.qameta.allure:allure-selenide:2.13.10'
+            'io.qameta.allure:allure-selenide:2.14.0'
     )
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.2")
 
@@ -28,6 +28,7 @@ dependencies {
 
 allure {
     version = '2.14.0'
+    aspectjVersion = "1.9.4"
     aspectjweaver = true
     autoconfigure = true
 
@@ -37,5 +38,5 @@ allure {
 }
 
 test {
-    useJUnitPlatform{}
+    useJUnitPlatform()
 }
