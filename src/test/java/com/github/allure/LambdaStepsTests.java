@@ -21,6 +21,11 @@ public class LambdaStepsTests {
 
     @Test
     void testIssueSearch(){
+        Allure.parameter("Base URL", BASE_URL);
+        Allure.parameter("Repository", REPOSITORY);
+        Allure.parameter("Issue number", ISSUE_NUMBER);
+
+
         step("Открываем главную страницу" + BASE_URL, (s) -> {
             s.parameter("Урл", BASE_URL);
             open("https://github.com");
