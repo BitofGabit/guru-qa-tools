@@ -1,4 +1,4 @@
-package oop.zoo;
+package oop;
 
 public class Bird extends Animal {
 

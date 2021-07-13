@@ -1,4 +1,4 @@
-package oop.zoo;
+package oop;
 
 //ABSTRACT CLASS
 public abstract class Animal {

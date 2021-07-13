@@ -1,4 +1,4 @@
-package oop.zoo;
+package oop;
 
 //ZOO IS WHERE MY MAIN METHOD LIVES
 public class Zoo {
