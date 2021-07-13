@@ -4,7 +4,6 @@ import com.codeborne.selenide.Configuration;
 import com.demoqa.componets.calendarComponent;
 import com.github.javafaker.Address;
 import com.github.javafaker.Faker;
-import com.github.javafaker.GameOfThrones;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

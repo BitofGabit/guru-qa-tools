@@ -1,4 +1,4 @@
-package com.github.testFiles.Utils;
+package com.github.testFiles.utils;
 
 import org.apache.commons.io.FileUtils;
 

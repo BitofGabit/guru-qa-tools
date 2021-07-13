@@ -1,7 +1,7 @@
-package com.github.testFiles;
+package com.github.testFiles.tests;
 
 import com.codeborne.selenide.Configuration;
-import com.github.testFiles.Utils.Files;
+import com.github.testFiles.utils.Files;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
