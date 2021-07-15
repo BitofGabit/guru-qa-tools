@@ -43,4 +43,4 @@ downloads/
 /gradlew
 /gradlew.bat
 
-#Run this command: git rm - r --cached . (which removes everything from the git index in order to refresh your git repository)
+#Run this command: git rm -r --cached . (which removes everything from the git index in order to refresh your git repository)
