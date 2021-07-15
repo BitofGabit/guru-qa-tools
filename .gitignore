@@ -35,6 +35,7 @@ bin/
 out/
 logs/
 target/
+downloads/
 .classpath
 .project
 .settings/org.eclipse.buildship.core.prefs
