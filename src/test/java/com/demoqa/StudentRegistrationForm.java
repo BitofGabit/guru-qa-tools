@@ -3,7 +3,6 @@ package com.demoqa;
 import com.codeborne.selenide.Configuration;
 import com.demoqa.componets.CalendarComponent;
 import com.demoqa.utils.StudentDataUtils;
-import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -49,7 +48,6 @@ public class StudentRegistrationForm extends CalendarComponent {
                 .shouldHave(text("Picture"), text("table.js"))
                 .shouldHave(text("Address"), text(fakeAddress))
                 .shouldHave(text("State and City"), text("NCR Delhi"));
-
         sleep(5);
     }
 }
