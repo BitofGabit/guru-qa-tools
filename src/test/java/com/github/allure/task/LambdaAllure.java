@@ -27,28 +27,28 @@ public class LambdaAllure {
         Allure.parameter("Issue number", ISSUE_NUMBER);
 
 
-        step("Открываем главную страницу" + BASE_URL, (s) -> {
-            s.parameter("Урл", BASE_URL);
+        step("Open this url: " + BASE_URL, (s) -> {
+            s.parameter("???", BASE_URL);
             open("https://github.com");
             makeScreenshot();
         });
-        step("Ищем репозиторий" + REPOSITORY, (s) -> {
+        step("Search next repo: " + REPOSITORY, (s) -> {
             s.parameter("repository", REPOSITORY);
             $("[data-scoped-placeholder=\"Search\"]")
                     .setValue("allure-example")
                     .submit();
             makeScreenshot();
         });
-        step("Переходим в репозиторий" + REPOSITORY, (s) -> {
+        step("Go to next reop: " + REPOSITORY, (s) -> {
             s.parameter("repository", REPOSITORY);
             $(By.linkText("eroshenkoam/allure-example")).click();
             makeScreenshot();
         });
-        step("Открываем Таб Issues в репозиторий", () -> {
+        step("Navigate to the Issues", () -> {
             $("[data-content=\"Issues\"]").click();
             makeScreenshot();
         });
-        step("Проверяем что название Issue " + ISSUE_NUMBER + " слд: " + ISSUE_NAME, (s) -> {
+        step("Check if Issue " + ISSUE_NUMBER + " has number: " + ISSUE_NAME, (s) -> {
             s.parameter("number", ISSUE_NUMBER);
             s.parameter("name", ISSUE_NAME);
             $("#issue_68_link").shouldHave(Condition.text("Listeners NamedBy"));
