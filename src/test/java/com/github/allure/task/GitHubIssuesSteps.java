@@ -11,25 +11,25 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class GitHubIssuesSteps {
 
-    @Step("Открываем главную страницу")
+    @Step("Open main page")
     public void openMainPage(){
         open("https://github.com");
     }
-    @Step("Ищем репозиторий {repo}")
+    @Step("Search for this {repo}")
     public void searchForRepo(String repo){
         $("[data-scoped-placeholder=\"Search\"]")
                 .setValue(repo)
                 .submit();
     }
-    @Step("Переходим в репозиторий {repo}")
+    @Step("Go to this {repo}")
     public void goToRepo(String repo){
         $(By.linkText(repo)).click();
     }
-    @Step("Открываем Таб Issues в репозиторий")
+    @Step("Open Issues tab")
     public void openIssueTab(){
         $("[data-content=\"Issues\"]").click();
     }
-    @Step("Проверяем что Issue {name} существует")
+    @Step("Check that the Issue {name} exists")
     public void shouldSeeIssueWithNumber(String name){
         $("#issue_68_link").shouldHave(Condition.text("Listeners NamedBy"));
     }
