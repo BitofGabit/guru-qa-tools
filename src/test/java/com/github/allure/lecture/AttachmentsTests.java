@@ -1,4 +1,4 @@
-package com.github.allure;
+package com.github.allure.lecture;
 
 import io.qameta.allure.Allure;
 import org.junit.jupiter.api.Test;

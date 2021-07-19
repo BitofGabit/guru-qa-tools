@@ -1,4 +1,4 @@
-package com.github.allure;
+package com.github.allure.lecture;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
@@ -9,28 +9,28 @@ import org.junit.jupiter.api.Test;
 public class AnnotatedLabelsTests {
 
         @Test
-        @Story("Создание Issues")
+        @Story("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Issues")
         @Severity(SeverityLevel.BLOCKER)
         @Link(value = "Github", url = "https://github.com")
-        @DisplayName("Тест на проверку создания Issue")
+        @DisplayName("пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Issue")
         public void testIssueCreate() {
 
         }
 
         @Test
-        @Story("Удаление Issues")
+        @Story("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Issues")
         @Severity(SeverityLevel.BLOCKER)
         @Link(value = "Github", url = "https://github.com")
-        @DisplayName("Тест на проверку удаления Issue от имени автора")
+        @DisplayName("пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Issue пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ")
         public void testIssueDelete() {
 
         }
 
         @Test
-        @Story("Удаление Issues")
+        @Story("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Issues")
         @Severity(SeverityLevel.BLOCKER)
         @Link(value = "Github", url = "https://github.com")
-        @DisplayName("Тест на проверку удаления Issue от имени владельца репозитория")
+        @DisplayName("пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Issue пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
         public void testIssueDeleteFromRepositoryOwner() {
 
         }

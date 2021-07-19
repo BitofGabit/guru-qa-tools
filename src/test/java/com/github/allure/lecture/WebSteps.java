@@ -1,4 +1,4 @@
-package com.github.allure;
+package com.github.allure.lecture;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Attachment;
@@ -11,25 +11,25 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class WebSteps {
 
-    @Step("Открываем главную страницу")
+    @Step("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
     public void openMainPage(){
         open("https://github.com");
     }
-    @Step("Ищем репозиторий {repo}")
+    @Step("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ {repo}")
     public void searchForRepo(String repo){
         $("[data-scoped-placeholder=\"Search\"]")
                 .setValue(repo)
                 .submit();
     }
-    @Step("Переходим в репозиторий {repo}")
+    @Step("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ {repo}")
     public void goToRepo(String repo){
         $(By.linkText(repo)).click();
     }
-    @Step("Открываем Таб Issues в репозиторий")
+    @Step("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ Issues пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
     public void openIssueTab(){
         $("[data-content=\"Issues\"]").click();
     }
-    @Step("Проверяем что Issues {number} существует")
+    @Step("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ Issues {number} пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
     public void shouldSeeIssueWithNumber(int number){
         $(withText(String.valueOf(number))).should(Condition.exist);
     }

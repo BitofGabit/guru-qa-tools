@@ -1,4 +1,4 @@
-package com.github.allure;
+package com.github.allure.lecture;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.logevents.SelenideLogger;

@@ -1,4 +1,4 @@
-package com.github.allure;
+package com.github.allure.lecture;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Allure;
@@ -26,28 +26,28 @@ public class LambdaStepsTests {
         Allure.parameter("Issue number", ISSUE_NUMBER);
 
 
-        step("Открываем главную страницу" + BASE_URL, (s) -> {
-            s.parameter("Урл", BASE_URL);
+        step("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" + BASE_URL, (s) -> {
+            s.parameter("пїЅпїЅпїЅ", BASE_URL);
             open("https://github.com");
             makeScreenshot();
         });
-        step("Ищем репозиторий" + REPOSITORY, (s) -> {
+        step("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" + REPOSITORY, (s) -> {
             s.parameter("repository", REPOSITORY);
             $("[data-scoped-placeholder=\"Search\"]")
                     .setValue("allure-example")
                     .submit();
             makeScreenshot();
         });
-        step("Переходим в репозиторий" + REPOSITORY, (s) -> {
+        step("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" + REPOSITORY, (s) -> {
             s.parameter("repository", REPOSITORY);
             $(By.linkText("eroshenkoam/allure-example")).click();
             makeScreenshot();
         });
-        step("Открываем Таб Issues в репозиторий", () -> {
+        step("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ Issues пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", () -> {
             $("[data-content=\"Issues\"]").click();
             makeScreenshot();
         });
-        step("Проверяем что Issues" + ISSUE_NUMBER + "существует", (s) -> {
+        step("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ Issues" + ISSUE_NUMBER + "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", (s) -> {
             s.parameter("number", ISSUE_NUMBER);
             $(withText("#68")).should(Condition.exist);
             makeScreenshot();
@@ -57,21 +57,21 @@ public class LambdaStepsTests {
 
     @Test
     void testIssueAntiSearch(){
-        step("Открываем главную страницу", () -> {
+        step("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", () -> {
             open("https://github.com");
         });
-        step("Ищем репозиторий", () -> {
+        step("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", () -> {
             $("[data-scoped-placeholder=\"Search\"]")
                     .setValue("allure-example")
                     .submit();
         });
-        step("Переходим в репозиторий", () -> {
+        step("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", () -> {
             $(By.linkText("eroshenkoam/allure-example")).click();
         });
-        step("Открываем Таб Issues в репозиторий", () -> {
+        step("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ Issues пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", () -> {
             $("[data-content=\"Issues\"]").click();
         });
-        step("Проверяем что Issues 68 НЕ существует", () -> {
+        step("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ Issues 68 пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", () -> {
             $(withText("#68")).should(Condition.exist);
         });
         sleep(3000);
